@@ -3,11 +3,13 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 export const alt = "Tally — GitHub pull requests in your menu bar";
-export const size = { width: 1200, height: 630 };
+// Rendered at 2x the classic 1200x630 for crisp text on retina displays;
+// the JSX below stays in 1200x630 coordinates via a scale(2) wrapper.
+export const size = { width: 2400, height: 1260 };
 export const contentType = "image/png";
 
 const avatar = (id: string) =>
-  `https://images.unsplash.com/${id}?w=80&h=80&fit=crop&crop=faces&auto=format`;
+  `https://images.unsplash.com/${id}?w=160&h=160&fit=crop&crop=faces&auto=format`;
 
 type OgRow = {
   title: string;
@@ -124,6 +126,15 @@ export default async function OgImage() {
           backgroundColor: "#2a2a8f",
         }}
       >
+       <div
+          style={{
+            width: 1200,
+            height: 630,
+            display: "flex",
+            transform: "scale(2)",
+            transformOrigin: "top left",
+          }}
+        >
         { }
         <img
           src={wallpaperSrc}
@@ -226,21 +237,53 @@ export default async function OgImage() {
               <div
                 style={{
                   display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                   width: 34,
                   height: 34,
                   borderRadius: 17,
                   backgroundColor: "rgba(0,0,0,0.06)",
                 }}
-              />
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width={15}
+                  height={15}
+                  fill="none"
+                  stroke="#3f3f46"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="23 4 23 10 17 10" />
+                  <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                </svg>
+              </div>
               <div
                 style={{
                   display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                   width: 34,
                   height: 34,
                   borderRadius: 17,
                   backgroundColor: "rgba(0,0,0,0.06)",
                 }}
-              />
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width={15}
+                  height={15}
+                  fill="none"
+                  stroke="#3f3f46"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                </svg>
+              </div>
             </div>
 
             {/* chips */}
@@ -380,6 +423,7 @@ export default async function OgImage() {
               ))}
             </div>
           </div>
+        </div>
         </div>
       </div>
     ),
