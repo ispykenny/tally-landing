@@ -210,7 +210,7 @@ export function HeroDemo() {
         setTimeout(() => {
           const start = performance.now();
           const tick = (now: number) => {
-            const t = Math.min((now - start) / 1100, 1);
+            const t = Math.min((now - start) / 600, 1);
             setCount(Math.round(20 * (1 - Math.pow(1 - t, 3))));
             if (t < 1) raf = requestAnimationFrame(tick);
           };
