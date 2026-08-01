@@ -8,6 +8,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gittally.app"),
   title: "Tally — GitHub pull requests in your menu bar",
   description:
     "A native macOS menu bar app that keeps every open pull request one click away. Subscribe to repos, see the count at a glance, and get notified the moment a new PR opens.",
