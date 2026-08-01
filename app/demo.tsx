@@ -444,6 +444,25 @@ export function HeroDemo() {
           </div>
         </div>
       </div>
+
+      {/* invisible spacer holding the new row's height below the popover, so
+          the frame is at its final height from the start — it collapses in
+          sync as the row above expands */}
+      <div aria-hidden className="flex justify-center px-4 sm:justify-end sm:pr-5">
+        <div className="w-full max-w-105 px-4">
+          <div
+            className={`grid transition-all duration-600 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${
+              stage >= 2 ? "grid-rows-[0fr]" : "grid-rows-[1fr]"
+            }`}
+          >
+            <div className="overflow-hidden">
+              <div className="invisible pb-2">
+                <PrCard pr={NEW_PR} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
