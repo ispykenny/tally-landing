@@ -208,8 +208,9 @@ export function HeroDemo() {
       // count the badge up 0 → 20 while the popover opens
       timers.push(
         setTimeout(() => {
-          const start = performance.now();
+          let start: number | null = null;
           const tick = (now: number) => {
+            if (start === null) start = now;
             const t = Math.min((now - start) / 600, 1);
             setCount(Math.round(20 * (1 - Math.pow(1 - t, 3))));
             if (t < 1) raf = requestAnimationFrame(tick);
