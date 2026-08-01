@@ -17,7 +17,6 @@ type OgRow = {
   comments: string;
   draft?: boolean;
   approved?: boolean;
-  fresh?: boolean;
 };
 
 const ROWS: OgRow[] = [
@@ -27,7 +26,6 @@ const ROWS: OgRow[] = [
     img: avatar("photo-1567532939604-b6b5b0db2604"),
     checks: "0",
     comments: "0",
-    fresh: true,
   },
   {
     title: "APP-1204: Remember filter selection",
@@ -310,7 +308,7 @@ export default async function OgImage() {
                     gap: 10,
                     padding: 12,
                     borderRadius: 16,
-                    backgroundColor: r.fresh ? "rgba(5,150,105,0.12)" : "rgba(0,0,0,0.05)",
+                    backgroundColor: "rgba(0,0,0,0.05)",
                   }}
                 >
                   { }
