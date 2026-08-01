@@ -137,15 +137,9 @@ function EyeIcon({ className }: { className?: string }) {
   );
 }
 
-function PrCard({ pr, highlight }: { pr: PrRow; highlight?: boolean }) {
+function PrCard({ pr }: { pr: PrRow }) {
   return (
-    <div
-      className={`relative flex gap-3 rounded-2xl p-3 transition-colors duration-1000 ${
-        highlight
-          ? "bg-emerald-300/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]"
-          : "bg-white/45 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]"
-      }`}
-    >
+    <div className="relative flex gap-3 rounded-2xl bg-white/45 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
       <Image
         src={pr.avatar}
         alt=""
@@ -427,7 +421,7 @@ export function HeroDemo() {
             >
               <div className="overflow-hidden">
                 <div className="pb-2">
-                  <PrCard pr={NEW_PR} highlight />
+                  <PrCard pr={NEW_PR} />
                 </div>
               </div>
             </li>
