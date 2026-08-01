@@ -346,14 +346,34 @@ export function HeroDemo() {
               <div className="text-[15px] font-semibold text-zinc-900">Tally</div>
               <div className="text-[12px] text-zinc-500">@ispykenny</div>
             </div>
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/50 text-zinc-600">
-              <svg viewBox="0 0 16 16" className="h-4 w-4" fill="currentColor" aria-hidden>
-                <path d="M13.65 2.35A8 8 0 1 0 16 8h-1.5A6.5 6.5 0 1 1 12.6 3.4L10 6h6V0l-2.35 2.35Z" />
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/50 text-zinc-700">
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden
+              >
+                <polyline points="23 4 23 10 17 10" />
+                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
               </svg>
             </span>
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/50 text-zinc-600">
-              <svg viewBox="0 0 16 16" className="h-4 w-4" fill="currentColor" aria-hidden>
-                <path d="M8 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm7 3.35v-.7l-1.6-.55a5.7 5.7 0 0 0-.4-.97l.74-1.52-.5-.5-.5-.5-1.52.74a5.7 5.7 0 0 0-.97-.4L9.7 1.35h-.7L8.45 3a5.7 5.7 0 0 0-.97.4L5.96 2.61l-1 1 .74 1.52a5.7 5.7 0 0 0-.4.97L3.7 6.65v.7l1.6.55c.1.34.23.66.4.97L4.96 10.4l1 1 1.52-.74c.3.17.63.3.97.4l.55 1.6h.7l.55-1.6c.34-.1.66-.23.97-.4l1.52.74 1-1-.74-1.52c.17-.3.3-.63.4-.97l1.6-.56Z" />
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/50 text-zinc-700">
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden
+              >
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
               </svg>
             </span>
           </div>
